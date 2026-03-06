@@ -5,27 +5,34 @@ export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Hero Section */}
-      <section className="text-center mb-16">
-        <p className="text-gray-600 mb-2">Découvrez dès maintenant</p>
-        <h1 className="text-5xl font-serif text-emerald-400 mb-2">Je te hais</h1>
-        <p className="text-xl text-gray-700 mb-8">de Marie Capucin</p>
-        
-        <div className="relative w-80 h-96 mx-auto mb-8">
-          <Image
-            src="/images/je-te-hais-cover.jpg"
-            alt="Je te hais - Marie Capucin"
-            fill
-            className="object-contain"
-            priority
-          />
+      <section className="flex flex-col md:flex-row items-center gap-12 mb-16">
+        <div className="md:w-1/2">
+          <div className="relative aspect-[2/3] w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
+            <Image
+              src="/images/je-te-hais-cover.jpg"
+              alt="Je te hais - Marie Capucin"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
         
-        <Link 
-          href="/romans/je-te-hais"
-          className="inline-block bg-emerald-400 text-white px-6 py-3 rounded-md hover:bg-emerald-500 transition-colors"
-        >
-          📖 Découvrez Je te hais
-        </Link>
+        <div className="md:w-1/2 text-center md:text-left">
+          <p className="text-gray-500 mb-2 uppercase tracking-wider text-sm">Nouveau roman</p>
+          <h1 className="text-5xl font-serif text-emerald-400 mb-4">Je te hais</h1>
+          <p className="text-xl text-gray-600 mb-6">de Marie Capucin</p>
+          <p className="text-gray-700 mb-8 leading-relaxed">
+            Quand un homme meurt, emporte-t-il ses secrets avec lui ? 
+            Un thriller émotionnel implacable où chaque page soulève de nouvelles interrogations.
+          </p>
+          <Link 
+            href="/romans/je-te-hais"
+            className="inline-block bg-emerald-400 text-white px-8 py-4 rounded-md hover:bg-emerald-500 transition-colors text-lg font-medium shadow-lg hover:shadow-xl"
+          >
+            Découvrir le roman
+          </Link>
+        </div>
       </section>
 
       {/* Author Message */}
